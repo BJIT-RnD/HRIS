@@ -59,10 +59,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDokxPH66voGxyje6zPajz5UR4tyxSzCwQ',
-    appId: '1:508925856625:ios:f888e36b43ca09f4c604d0',
+    appId: '1:508925856625:ios:b9b98bd528f07432c604d0',
     messagingSenderId: '508925856625',
     projectId: 'navigation-demo-a843d',
     storageBucket: 'navigation-demo-a843d.appspot.com',
-    iosBundleId: 'com.example.navigationDemo1',
+    iosBundleId: 'com.example.navigationDemo2',
   );
 }

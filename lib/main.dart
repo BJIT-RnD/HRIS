@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //await Future.delayed(const Duration(seconds: 1));
+  await Future.delayed(const Duration(seconds: 1));
   await FirebaseAPI().initNotifications();
   runApp(const App());
 }

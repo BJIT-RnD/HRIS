@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:navigation_demo/view/login_view.dart';
 import '../view/home_view.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -15,7 +16,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => HomeView()),
+      MaterialPageRoute(builder: (_) => LoginView()),
     );
   }
 
@@ -77,6 +78,10 @@ class OnBoardingPageState extends State<OnBoardingPage> {
         width: double.infinity,
         height: 60,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(
+                0xFF89DEA5), // Set the hex color for the button background
+          ),
           child: const Text(
             'Let\'s go right away!',
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
