@@ -2,6 +2,7 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:navigation_demo/view/home_view.dart';
+import 'package:navigation_demo/view/profile_view.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -44,7 +45,7 @@ class LoginViewModel extends GetxController {
 
           // Navigate to the homepage
           Get.off(
-              HomeView()); // Change '/homepage' to your actual homepage route
+              const ProfileView()); // Change '/homepage' to your actual homepage route
         }
       } catch (e) {
         print('Error decoding JSON: $e');
