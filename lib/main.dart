@@ -36,7 +36,7 @@ class App extends StatelessWidget {
       fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const Scaffold(
-        body: ProfileView(),
+        body: OnBoardingPage(),
       ),
     );
   }
