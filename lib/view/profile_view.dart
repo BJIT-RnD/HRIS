@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:navigation_demo/components/rectangle_with_ellipse.dart';
 import 'package:navigation_demo/components/rounded_button.dart';
 import 'package:navigation_demo/utils/colors/app_color.dart';
@@ -46,9 +47,9 @@ class ProfileView extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
-                    'Welcome Sadat',
-                    style: TextStyle(
+                  Text(
+                    'welcome'.tr,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
@@ -61,30 +62,30 @@ class ProfileView extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Row(
             children: [
-              RoundedButton(text: 'Your Signature'),
-              SizedBox(
+              RoundedButton(text: 'signature'.tr),
+              const SizedBox(
                 width: 30,
               ),
-              RoundedButton(text: 'Academic Certificates'),
+              RoundedButton(text: 'academic_certificates'.tr),
             ],
           ),
         ),
         const SizedBox(
           height: 40,
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Row(
             children: [
-              RoundedButton(text: 'Professional Trainings'),
-              SizedBox(
+              RoundedButton(text: 'professional_trainings'.tr),
+              const SizedBox(
                 width: 30,
               ),
-              RoundedButton(text: 'Training Certificate'),
+              RoundedButton(text: 'training_certificates'.tr),
             ],
           ),
         ),
