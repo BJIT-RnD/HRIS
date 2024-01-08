@@ -1,5 +1,3 @@
-// views/home_view.dart
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:navigation_demo/view/check_location_view.dart';
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Navigation App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue, // Set the default hex color here
       ),
       home: HomeView(),
     );
@@ -29,6 +27,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+        backgroundColor: const Color(0xFF89DEA5),
       ),
       body: Center(
         child: Column(
@@ -38,18 +37,30 @@ class HomeView extends StatelessWidget {
               onPressed: () {
                 Get.to(() => CheckLocationView());
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(
+                    0xFF89DEA5), // Set the hex color for this button
+              ),
               child: const Text('Check Location'),
             ),
             ElevatedButton(
               onPressed: () {
                 Get.to(() => OpenCameraView());
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(
+                    0xFF89DEA5), // Set the hex color for this button
+              ),
               child: const Text('Open Camera'),
             ),
             ElevatedButton(
               onPressed: () {
                 Get.to(() => OpenCalendarView());
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(
+                    0xFF89DEA5), // Set the hex color for this button
+              ),
               child: const Text('Open Calendar'),
             ),
           ],
