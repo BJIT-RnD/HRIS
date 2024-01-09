@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_demo/utils/colors/app_color.dart';
+import 'package:get/get.dart';
+import '../view/signature_view.dart'; // Import the SignatureView class
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -8,19 +10,24 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final shapeSize = MediaQuery.of(context).size.width;
-    return Container(
-      height: shapeSize / 3.2,
-      width: shapeSize / 3.2,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-        color: AppColor.primaryColor,
-      ),
-      child: Center(
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () {
+        Get.to(() => SignatureView()); // Navigate to SignatureView on tap
+      },
+      child: Container(
+        height: shapeSize / 3.2,
+        width: shapeSize / 3.2,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColor.primaryColor,
+        ),
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

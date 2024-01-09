@@ -6,6 +6,7 @@ import 'package:navigation_demo/components/rectangle_with_ellipse.dart';
 import 'package:navigation_demo/firebase_api/firebase_api.dart';
 import 'package:navigation_demo/utils/localization/language.dart';
 import 'package:navigation_demo/view/profile_view.dart';
+import 'package:navigation_demo/view/signature_view.dart';
 import '../onboarding/onboarding_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -16,7 +17,7 @@ void main() async {
   await Firebase.initializeApp();
   await Future.delayed(const Duration(seconds: 1));
   await FirebaseAPI().initNotifications();
-  runApp(const App());
+  runApp(App());
 }
 
 class App extends StatelessWidget {
@@ -35,8 +36,8 @@ class App extends StatelessWidget {
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const Scaffold(
-        body: OnBoardingPage(),
+      home: Scaffold(
+        body: SignatureView(),
       ),
     );
   }
