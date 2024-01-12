@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:navigation_demo/components/rectangle_with_ellipse.dart';
 import 'package:navigation_demo/firebase_api/firebase_api.dart';
 import 'package:navigation_demo/utils/localization/language.dart';
+import 'package:navigation_demo/view/academic_certificates_view.dart';
 import 'package:navigation_demo/view/profile_view.dart';
 import 'package:navigation_demo/view/signature_view.dart';
 import '../onboarding/onboarding_page.dart';
@@ -37,7 +38,7 @@ class App extends StatelessWidget {
       fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
-        body: SignatureView(),
+        body: AcademicCertificateView(),
       ),
     );
   }

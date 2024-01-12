@@ -9,6 +9,12 @@ class Language extends Translations {
           'professional_trainings': 'Professional Trainings',
           'training_certificates': 'Training Certificates',
           'welcome': 'Welcome',
+          'bsc_certificate': 'BSc Certificate',
+          'view': 'View',
+          '': '',
+          '': '',
+          '': '',
+          '': '',
         },
         'ja_JP': {
           '': '',
