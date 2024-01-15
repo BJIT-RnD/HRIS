@@ -27,7 +27,7 @@ class RectangleWithEllipse extends StatelessWidget {
 class WaveClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    throw UnimplementedError();
+    return false;
   }
 
   @override

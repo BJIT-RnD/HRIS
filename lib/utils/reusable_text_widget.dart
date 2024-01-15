@@ -5,18 +5,20 @@ class ReusableTextWidget extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final double borderRadius; // Added border radius parameter
+  final AlignmentGeometry alignment; // Added alignment parameter
 
   const ReusableTextWidget({
     required this.text,
     required this.backgroundColor,
     required this.textColor,
     this.borderRadius = 0.0, // Default to 0.0 if not provided
+    this.alignment = Alignment.centerLeft, // Default to center-left
   });
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment: alignment,
       child: Container(
         decoration: BoxDecoration(
           color: backgroundColor,
