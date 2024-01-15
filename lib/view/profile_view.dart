@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:navigation_demo/components/rectangle_with_ellipse.dart';
 import 'package:navigation_demo/components/rounded_button.dart';
 import 'package:navigation_demo/utils/colors/app_color.dart';
+import 'package:navigation_demo/view/academic_certificates_view.dart';
+import 'package:navigation_demo/view/signature_view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -67,11 +69,11 @@ class ProfileView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Row(
               children: [
-                RoundedButton(text: 'signature'.tr),
+                RoundedButton(viewName: SignatureView(), text: 'signature'.tr),
                 const SizedBox(
                   width: 30,
                 ),
-                RoundedButton(text: 'academic_certificates'.tr),
+                RoundedButton(viewName: AcademicCertificateView(), text: 'academic_certificates'.tr),
               ],
             ),
           ),
@@ -82,11 +84,11 @@ class ProfileView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Row(
               children: [
-                RoundedButton(text: 'professional_trainings'.tr),
+                RoundedButton(viewName: AcademicCertificateView(), text: 'professional_trainings'.tr),
                 const SizedBox(
                   width: 30,
                 ),
-                RoundedButton(text: 'training_certificates'.tr),
+                RoundedButton(viewName: AcademicCertificateView(), text: 'training_certificates'.tr),
               ],
             ),
           ),

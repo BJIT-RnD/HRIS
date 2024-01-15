@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../utils/colors/app_color.dart';
 import '../viewmodel/list_view_model.dart';
 
 class ListViewCell extends StatelessWidget {
@@ -14,25 +15,41 @@ class ListViewCell extends StatelessWidget {
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ElevatedButton(
-            onPressed: () {
-              // Handle edit button click
-            },
-            child: Text("Edit"),
+          Container(
+            height: 38,
+            width: 50,
+            decoration: BoxDecoration(
+              color: AppColor.buttonAmberColor,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.edit),
+            ),
           ),
-          SizedBox(width: 8),
-          ElevatedButton(
-            onPressed: () {
-              // Handle download button click
-            },
-            child: Text("Download"),
+          const SizedBox(width: 8),
+          Container(
+            height: 38,
+            width: 50,
+            decoration: BoxDecoration(
+              color: AppColor.buttonAmberColor,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.download),
+            ),
           ),
-          SizedBox(width: 8),
-          ElevatedButton(
-            onPressed: () {
-              // Handle view button click
-            },
-            child: Text("View"),
+          const SizedBox(width: 8),
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              backgroundColor: AppColor.buttonAmberColor,
+            ),
+            child: Text(
+              'view'.tr,
+              style: const TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),
