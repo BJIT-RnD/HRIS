@@ -50,8 +50,14 @@ class FirebaseAPI {
       sound: true,
     );
     await _firebaseMessaging.requestPermission();
-    final fCMToken = await _firebaseMessaging.getToken();
-    print('Token: $fCMToken');
+    try {
+      final fCMToken = await _firebaseMessaging.getToken();
+      print('Token: $fCMToken');
+      // Use fCMToken as needed
+    } catch (e) {
+      // Handle the exception here
+      print('Error getting FCM token: $e');
+    }
     //FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
     //terminated
     FirebaseMessaging.instance.getInitialMessage().then(handleMessage);
