@@ -6,6 +6,7 @@ class ReusableTextField extends StatelessWidget {
   final Color fillColor;
   final Color textColor;
   final double borderRadius;
+  final bool obscureText;
 
   const ReusableTextField({
     Key? key,
@@ -14,12 +15,14 @@ class ReusableTextField extends StatelessWidget {
     required this.fillColor,
     required this.textColor,
     this.borderRadius = 10.0,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       onChanged: onChanged,
+      obscureText: obscureText,
       style: TextStyle(color: textColor),
       decoration: InputDecoration(
         filled: true,

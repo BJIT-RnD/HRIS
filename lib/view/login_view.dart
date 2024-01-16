@@ -61,6 +61,7 @@ class LoginView extends StatelessWidget {
                 fillColor: const Color(0xFFE0E7DF),
                 textColor: Colors.black,
                 borderRadius: 10.0,
+                obscureText: true,
               ),
               const SizedBox(height: 16.0),
               ElevatedButton(
