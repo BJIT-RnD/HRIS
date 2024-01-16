@@ -8,13 +8,12 @@ import '../onboarding/onboarding_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 
-//void main() => runApp(const App());
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await Future.delayed(const Duration(seconds: 1));
   await FirebaseAPI().initNotifications();
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {

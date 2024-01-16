@@ -16,15 +16,19 @@ class AcademicCertificateView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          RectangleWithEllipse(),
-          Align(
-            alignment: Alignment.topLeft,
-            child: IconButton(
-              onPressed: () {
-                Get.off(const ProfileView());
-              },
-              icon: const Icon(Icons.navigate_before),
-            ),
+          Stack(
+            children: [
+              RectangleWithEllipse(),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: IconButton(
+                  onPressed: () {
+                    Get.off(const ProfileView());
+                  },
+                  icon: const Icon(Icons.navigate_before),
+                ),
+              ),
+            ],
           ),
           const SizedBox(
             height: 25,
