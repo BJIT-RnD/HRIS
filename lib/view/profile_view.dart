@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:navigation_demo/components/rectangle_with_ellipse.dart';
 import 'package:navigation_demo/components/rounded_button.dart';
 import 'package:navigation_demo/utils/colors/app_color.dart';
+import 'package:navigation_demo/utils/constant/constant.dart';
 import 'package:navigation_demo/view/academic_certificates_view.dart';
 import 'package:navigation_demo/view/signature_view.dart';
 
@@ -11,7 +12,6 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final profileImagePosition = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -21,15 +21,15 @@ class ProfileView extends StatelessWidget {
               RectangleWithEllipse(),
               Padding(
                 padding: EdgeInsets.only(
-                  top: profileImagePosition.height / 5 - 45,
-                  left: profileImagePosition.width / 4,
+                  top: displayHeight(context) / 5 - 45,
+                  left: displayWidth(context) / 4,
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                        height: profileImagePosition.width / 3.5,
-                        width: profileImagePosition.height / 3.5,
+                        height: displayWidth(context) / 3.5,
+                        width: displayHeight(context) / 3.5,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/img1.jpg'),
